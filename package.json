@@ -1,13 +1,9 @@
 {
-  "name": "angular-quickstart",
+  "name": "tour-of-heroes-test",
   "version": "1.0.0",
-  "description": "QuickStart package.json from the documentation, supplemented with testing support",
+  "description": "Tour of heroes tests",
   "scripts": {
     "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
-    "docker-build": "docker build -t ng2-quickstart .",
-    "docker": "npm run docker-build && docker run -it --rm -p 3000:3000 -p 3001:3001 ng2-quickstart",
-    "pree2e": "npm run webdriver:update",
-    "e2e": "tsc && concurrently \"http-server -s\" \"protractor protractor.config.js\" --kill-others --success first",
     "lint": "tslint ./app/**/*.ts -t verbose",
     "lite": "lite-server",
     "postinstall": "typings install",
@@ -15,8 +11,7 @@
     "test-once": "tsc && karma start karma.conf.js --single-run",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
-    "typings": "typings",
-    "webdriver:update": "webdriver-manager update"
+    "typings": "typings"
   },
   "keywords": [],
   "author": "",
@@ -52,7 +47,6 @@
     "typings": "^1.4.0",
 
     "canonical-path": "0.0.2",
-    "http-server": "^0.9.0",
     "tslint": "^3.15.1",
     "lodash": "^4.16.2",
     "jasmine-core": "~2.5.2",
@@ -62,7 +56,6 @@
     "karma-htmlfile-reporter": "^0.3.4",
     "karma-jasmine": "^1.0.2",
     "karma-jasmine-html-reporter": "^0.2.2",
-    "protractor": "^3.3.0",
     "rimraf": "^2.5.4"
   },
   "repository": {}
